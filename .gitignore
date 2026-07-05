@@ -1,0 +1,16 @@
+# Database config (if it contains sensitive info, we ignore it and provide an example)
+# app/config/config.php
+
+# Ignore database seed scripts and dumps
+seed.sql
+seed.php
+*.sql
+*.sqlite
+
+# Ignore uploads (optional, but usually we don't commit user uploads)
+# public/uploads/*
+# !public/uploads/.gitkeep
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
