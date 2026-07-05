@@ -1,31 +1,31 @@
 # 🛒 MVC E-Commerce Platform
 
-متجر إلكتروني متكامل مبني من الصفر باستخدام نمط معمارية **MVC (Model-View-Controller)** باستخدام لغة PHP (بدون استخدام إطارات عمل جاهزة). يهدف المشروع لتوفير تجربة تسوق سلسة مع لوحة تحكم لإدارة المنتجات، ونظام سلة مشتريات، وطلبات.
+A fully-featured e-commerce store built from scratch using the **MVC (Model-View-Controller)** architecture pattern in PHP (without the use of ready-made frameworks). The project aims to provide a seamless shopping experience with a dashboard for managing products, a shopping cart system, and an order management system.
 
-## ✨ المميزات (Features)
+## ✨ Features
 
-*   **بنية MVC نظيفة:** فصل كامل بين الـ Logic (النماذج)، وواجهة المستخدم (العروض)، والمتحكمات (Controllers)، مما يجعل الكود سهل القراءة والتطوير.
-*   **نظام التوجيه (Routing):** نظام توجيه مخصص (Custom Router) للتعامل مع الروابط بشكل أنيق وودي للـ SEO (مثل: `/product/show/1`).
-*   **نظام مصادقة متكامل (Authentication):** تسجيل دخول، تسجيل حساب جديد، وإدارة جلسات المستخدم (Sessions) مع صلاحيات (Admin / Customer).
-*   **إدارة المنتجات (للمشرفين فقط):** يمكن للمسؤول (Admin) إضافة، تعديل، وحذف المنتجات ورفع الصور.
-*   **تصفح وتصفية المنتجات:** واجهة جذابة لعرض المنتجات مع إمكانية البحث بالاسم أو الوصف، والتصفية حسب التصنيفات.
-*   **سلة المشتريات (Cart):** يمكن للعميل إضافة المنتجات، تعديل الكميات، وإتمام الطلب (Checkout) مع التحقق من توفر المخزون تلقائياً.
-*   **نظام الطلبات (Orders):** تسجيل الطلبات وخصم الكمية المشتراة من المخزون بشكل تفاعلي.
-*   **تصميم عصري (UI/UX):** واجهة مستخدم حديثة بأسلوب زجاجي (Glassmorphism) متوافقة مع جميع الشاشات.
+*   **Clean MVC Architecture:** A complete separation between Logic (Models), User Interface (Views), and Controllers, making the code easy to read and develop.
+*   **Routing System:** A custom router to handle URLs elegantly and in an SEO-friendly manner (e.g., `/product/show/1`).
+*   **Integrated Authentication System:** Login, account registration, and user session management with roles (Admin / Customer).
+*   **Product Management (Admins Only):** The admin can add, edit, and delete products, as well as upload images.
+*   **Product Browsing & Filtering:** An attractive interface for displaying products with the ability to search by name or description, and filter by categories.
+*   **Shopping Cart:** Customers can add products, adjust quantities, and proceed to checkout, with automatic stock availability validation.
+*   **Order System:** Recording orders and interactively deducting the purchased quantity from the inventory.
+*   **Modern UI/UX Design:** A contemporary user interface featuring a Glassmorphism aesthetic that is responsive and compatible with all screens.
 
-## 🛠️ التقنيات المستخدمة (Tech Stack)
+## 🛠️ Tech Stack
 
-*   **الواجهة الخلفية (Backend):** PHP (OOP & MVC)
-*   **قاعدة البيانات (Database):** MySQL (PDO)
-*   **الواجهة الأمامية (Frontend):** HTML5, CSS3 (Vanilla), JavaScript
-*   **الهيكلة:** Model-View-Controller Architecture
+*   **Backend:** PHP (OOP & MVC)
+*   **Database:** MySQL (PDO)
+*   **Frontend:** HTML5, CSS3 (Vanilla), JavaScript
+*   **Architecture:** Model-View-Controller
 
-## 🚀 طريقة التشغيل محلياً (Installation)
+## 🚀 Local Installation
 
-1.  قم باستنساخ المستودع (Clone the repository).
-2.  انقل مجلد المشروع إلى مجلد `htdocs` الخاص بـ XAMPP (أو ما يعادله).
-3.  قم بإنشاء قاعدة بيانات جديدة في MySQL.
-4.  تأكد من تحديث بيانات الاتصال بقاعدة البيانات في ملف `app/config/config.php`:
+1.  Clone the repository.
+2.  Move the project folder into your `htdocs` directory in XAMPP (or its equivalent).
+3.  Create a new database in MySQL.
+4.  Make sure to update the database connection credentials in the `app/config/config.php` file:
     ```php
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
@@ -33,21 +33,19 @@
     define('DB_NAME', 'your_database_name');
     define('URLROOT', 'http://localhost/mvc/public');
     ```
-5.  شغّل مشروعك من المتصفح عبر الدخول إلى الرابط: `http://localhost/mvc/public`.
-*(ملاحظة: قاعدة البيانات سيتم إنشاؤها وتكوين جداولها تلقائياً عند أول تشغيل للمشروع הודות لآلية الـ Auto-migration في كود الـ Database).*
+5.  Run your project from the browser by visiting the URL: `http://localhost/mvc/public`.
+*(Note: The database and its tables will be created and configured automatically on the first run thanks to the auto-migration feature in the Database code).*
 
-## 📸 لقطات الشاشة (Screenshots)
+## 📸 Screenshots
 
-*(قم بوضع صور مشروعك في مجلد `screenshots` وضع مسارها هنا)*
+### 1. Home Page & Products
+![Products](screenshots/home.png)
 
-### 1. الصفحة الرئيسية والمنتجات
-![المنتجات](screenshots/home.png)
+### 2. Shopping Cart
+![Cart](screenshots/cart.png)
 
-### 2. سلة المشتريات
-![السلة](screenshots/cart.png)
-
-### 3. لوحة تحكم المشرف (إضافة منتج)
-![إضافة منتج](screenshots/admin.png)
+### 3. Admin Dashboard (Add Product)
+![Add Product](screenshots/admin.png)
 
 ---
-*تم التطوير بكل ❤️ باستخدام PHP MVC.*
+*Developed with ❤️ using PHP MVC.*
