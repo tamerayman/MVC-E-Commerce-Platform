@@ -4,14 +4,14 @@ A fully-featured e-commerce store built from scratch using the **MVC (Model-View
 
 ## ✨ Features
 
-*   **Clean MVC Architecture:** A complete separation between Logic (Models), User Interface (Views), and Controllers, making the code easy to read and develop.
-*   **Routing System:** A custom router to handle URLs elegantly and in an SEO-friendly manner (e.g., `/product/show/1`).
-*   **Integrated Authentication System:** Login, account registration, and user session management with roles (Admin / Customer).
-*   **Product Management (Admins Only):** The admin can add, edit, and delete products, as well as upload images.
-*   **Product Browsing & Filtering:** An attractive interface for displaying products with the ability to search by name or description, and filter by categories.
-*   **Shopping Cart:** Customers can add products, adjust quantities, and proceed to checkout, with automatic stock availability validation.
-*   **Order System:** Recording orders and interactively deducting the purchased quantity from the inventory.
-*   **Modern UI/UX Design:** A contemporary user interface featuring a Glassmorphism aesthetic that is responsive and compatible with all screens.
+- **Built from Scratch using MVC Architecture:** Implemented a custom Model-View-Controller architecture with a clear separation of concerns for improved maintainability and scalability.
+- **Custom Routing System:** Developed an SEO-friendly routing mechanism for clean and readable URLs (e.g., `/product/show/1`).
+- **Authentication & Authorization:** Implemented secure user authentication, session management, and role-based access control for Administrators and Customers.
+- **Product Management:** Built a complete admin dashboard for product CRUD operations and image uploads.
+- **Product Catalog & Search:** Implemented product browsing, category filtering, and keyword-based search.
+- **Shopping Cart:** Developed a dynamic shopping cart with quantity management and stock availability validation.
+- **Order Management:** Implemented order processing with automatic inventory updates after successful checkout.
+- **Responsive UI:** Designed a modern, responsive Glassmorphism-based user interface compatible with desktop and mobile devices.
 
 ## 🛠️ Tech Stack
 
