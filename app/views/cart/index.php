@@ -41,7 +41,11 @@
                                     <td>
                                         <div style="display: flex; align-items: center; gap: 15px;">
                                             <?php if (!empty($item['image'])): ?>
-                                                <img src="<?php echo URLROOT; ?>/uploads/<?php echo $item['image']; ?>" alt="Product" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass);">
+                                                <?php if (strpos($item['image'], 'http') === 0): ?>
+                                                    <img src="<?php echo $item['image']; ?>" alt="Product" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass);">
+                                                <?php else: ?>
+                                                    <img src="<?php echo URLROOT; ?>/uploads/<?php echo $item['image']; ?>" alt="Product" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass);">
+                                                <?php endif; ?>
                                             <?php else: ?>
                                                 <img src="https://placehold.co/100x100/18182b/7c3aed?text=<?php echo urlencode($item['name']); ?>" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass);">
                                             <?php endif; ?>

@@ -73,7 +73,11 @@
                                     <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 10px 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.03);">
                                         <div style="display: flex; align-items: center; gap: 12px;">
                                             <?php if (!empty($item['product_image'])): ?>
-                                                <img src="<?php echo URLROOT; ?>/uploads/<?php echo $item['product_image']; ?>" alt="Product" style="width: 40px; height: 40px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-glass);">
+                                                <?php if (strpos($item['product_image'], 'http') === 0): ?>
+                                                    <img src="<?php echo $item['product_image']; ?>" alt="Product" style="width: 40px; height: 40px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-glass);">
+                                                <?php else: ?>
+                                                    <img src="<?php echo URLROOT; ?>/uploads/<?php echo $item['product_image']; ?>" alt="Product" style="width: 40px; height: 40px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-glass);">
+                                                <?php endif; ?>
                                             <?php else: ?>
                                                 <img src="https://placehold.co/100x100/18182b/7c3aed?text=<?php echo urlencode($item['product_name']); ?>" style="width: 40px; height: 40px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-glass);">
                                             <?php endif; ?>
